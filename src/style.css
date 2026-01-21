@@ -1,0 +1,31 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Oswald:wght@200..700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+
+@import "tailwindcss";
+
+@theme {
+  /* breakpoint */
+  --breakpoint-sm: 576px;
+  --breakpoint-md: 768px;
+  --breakpoint-lg: 992px;
+  --breakpoint-xl: 1200px;
+
+  /* font */
+  --font-montserrat: 'Montserrat', sans-serif;
+  --font-oswald: 'Oswald', sans-serif;
+  --font-playfair: 'Playfair Display', serif;
+
+  /* color */
+  --color-primary: #fd3d57;
+}
+
+@layer utilities {
+  .container {
+    margin-inline: auto;
+    padding-left: 5rem;
+    padding-right: 5rem;
+  }
+}
+
+body {
+  font-family: var(--font-montserrat);
+}
