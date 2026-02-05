@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Oswald:wght@200..700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
 
 @import "tailwindcss";
+@plugin "@tailwindcss/forms"; 
 
 @theme {
   /* breakpoint */
@@ -26,6 +27,22 @@
   }
 }
 
+@layer components {
+  .size-selector input:checked + label {
+    @apply bg-primary text-white;
+  }
+  .color-selector input:checked + label {
+    @apply ring-2 ring-primary;
+  }
+  .input-box {
+    @apply block w-full border border-gray-300 px-4 py-3 text-gray-600 text-sm rounded focus:border-primary focus:ring-0 placeholder-gray-300;
+  }
+}
+
 body {
+  font-family: var(--font-montserrat);
+}
+
+h1, h2, h3, h4, h5, h6 {
   font-family: var(--font-montserrat);
 }
